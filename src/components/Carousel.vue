@@ -1,12 +1,13 @@
 <template>
   <div id="carousel">
     <img :src="arrows.arrowLeft" class="arrows" @click="gotToPreviousSlide"/>
-    <img :src="this.singleSlide" width="500px" height="500px"/>
+    <img :src="this.singleSlide" width="500px" height="500px" id="image"/>
     <img :src="arrows.arrowRight" class="arrows" @click="goToNextSlide"/>
   </div>
 </template>
 
 <script>
+
 export default {
     data() {
         return {
@@ -55,18 +56,46 @@ export default {
 
 
 
-<style>
+<style lang="scss">
 
-#carousel {
-    display: flex;
-    flex-direction: row;
+ @media only screen and (min-width: 480px) {
+    html {
+        box-sizing: border-box;
+        font-size: 10px; 
+    }
+
+    #carousel {
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+        width: 750px;
+        height: 310px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .arrows {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        cursor: pointer
+    }
+
+    #image {
+        width: 300px;
+        height: 300px;
+    }  
 }
 
-.arrows {
-    display: flex;
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
-}
+ @media only screen and (min-width: 768px) {
+
+ }
+
+  @media only screen and (min-width: 1024px) {
+
+ }
+
 
 </style>
+
+
