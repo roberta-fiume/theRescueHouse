@@ -7,8 +7,11 @@
 </template>
 
 <script>
+//  import mediaQueries from '../_mediaQueries.scss'
+
 
 export default {
+   
     data() {
         return {
             images: [
@@ -37,11 +40,11 @@ export default {
     methods: {
         goToNextSlide() {
             this.currentImage++;
-            console.log("CURRENT IMAGE", this.currentImage)
+            // console.log("CURRENT IMAGE", this.currentImage)
             let singleImage = this.images[this.currentImage].name;
-                console.log("imageeee", singleImage)
+                // console.log("imageeee", singleImage)
             this.singleSlide = singleImage;
-            console.log("slideeeeee", this.singleSlide)
+            // console.log("slideeeeee", this.singleSlide)
             return this.singleSlide
         },
         gotToPreviousSlide() {
@@ -58,42 +61,16 @@ export default {
 
 <style lang="scss">
 
- @media only screen and (min-width: 480px) {
-    html {
-        box-sizing: border-box;
-        font-size: 10px; 
-    }
+@import "../styles/global.scss";
+@import "../styles/components/carousel.scss";
 
-    #carousel {
-        background-color: lightblue;
-        display: flex;
-        align-items: center;
-        width: 750px;
-        height: 310px;
-        flex-direction: row;
-        justify-content: space-around;
-    }
+    // @media only screen and (min-width: 768px) {
 
-    .arrows {
-        display: flex;
-        width: 50px;
-        height: 50px;
-        cursor: pointer
-    }
+    // }
 
-    #image {
-        width: 300px;
-        height: 300px;
-    }  
-}
+    // @media only screen and (min-width: 1024px) {
 
- @media only screen and (min-width: 768px) {
-
- }
-
-  @media only screen and (min-width: 1024px) {
-
- }
+    // }
 
 
 </style>
