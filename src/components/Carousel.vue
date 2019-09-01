@@ -1,13 +1,15 @@
 <template>
   <div id="carousel">
     <img :src="arrows.arrowLeft" class="arrows" @click="gotToPreviousSlide"/>
-    <img :src="this.singleSlide" width="500px" height="500px" id="image"/>
+    <div id="petBox">
+        <h3 id="petName">Meet {{petName}}</h3>
+         <img :src="this.singleSlide" width="500px" height="500px" id="image"/>
+    </div>
     <img :src="arrows.arrowRight" class="arrows" @click="goToNextSlide"/>
   </div>
 </template>
 
 <script>
-//  import mediaQueries from '../_mediaQueries.scss'
 
 
 export default {
@@ -15,10 +17,14 @@ export default {
     data() {
         return {
             images: [
-                {name: require('@/assets/img/bea.jpg')},
-                {name: require('@/assets/img/ben.jpg')},
-                {name: require('@/assets/img/jasmine.jpg')},
-                {name: require('@/assets/img/oliver.jpg')},
+                {name: require('@/assets/img/bea.jpg'),
+                 petName:"Bea"},
+                {name: require('@/assets/img/ben.jpg'),
+                 petName:"Ben"},
+                {name: require('@/assets/img/jasmine.jpg'),
+                 petName:"Jasmine"},
+                {name: require('@/assets/img/oliver.jpg'),
+                 petName:"Oliver"},
             ],
             
             arrows: {
@@ -27,7 +33,8 @@ export default {
             },
 
             currentImage: "",
-            singleSlide: ""
+            singleSlide: "",
+            petName: "",
            
         }
     },
@@ -35,16 +42,16 @@ export default {
     created() {
          this.currentImage = 0;
          this.singleSlide = this.images[this.currentImage].name;
+         this.petName = this.images[this.currentImage].petName;
     },
 
     methods: {
         goToNextSlide() {
             this.currentImage++;
-            // console.log("CURRENT IMAGE", this.currentImage)
             let singleImage = this.images[this.currentImage].name;
-                // console.log("imageeee", singleImage)
             this.singleSlide = singleImage;
-            // console.log("slideeeeee", this.singleSlide)
+            this.goToNextPetName();
+          
             return this.singleSlide
         },
         gotToPreviousSlide() {
@@ -52,6 +59,13 @@ export default {
             let singleImage = this.images[this.currentImage].name;
             this.singleSlide = singleImage;
             return this.singleSlide
+        },
+
+        goToNextPetName() {
+            let singlePetName = this.images[this.currentImage].petName;
+            this.petName = singlePetName;
+
+            return this.petName
         }
     }
 }
@@ -63,6 +77,8 @@ export default {
 
 @import "../styles/global.scss";
 @import "../styles/components/carousel.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand|Itim&display=swap');
 
 
 </style>
