@@ -60,6 +60,8 @@ export default {
             this.currentImage--;
             let singleImage = this.images[this.currentImage].name;
             this.singleSlide = singleImage;
+            console.log("THIS IS THE slide", petName);
+            this.goToPreviousPetName();
             return this.singleSlide
         },
 
@@ -68,7 +70,13 @@ export default {
             this.petName = singlePetName;
 
             return this.petName
-        }
+        },
+
+         goToPreviousPetName() {
+            let singlePetName = this.images[this.currentImage].petName;
+            this.petName = singlePetName;
+            return this.petName
+         }
     }
 }
 </script>
