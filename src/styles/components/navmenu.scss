@@ -4,6 +4,23 @@
     flex-direction: $direction;
 }
 
+@mixin widthAndHeight($setWidth:40px, $setHeight:60px) {
+    width: $setWidth;
+    height: $setHeight
+}
+
+@mixin textProperties($setFontSize:23px) {
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+    font-size: $setFontSize;
+    color: black;
+}
+
+@mixin justifyAndTextStyle() {
+    justify-content: center;
+    list-style-type: none;
+}
+
 .icon-container {
     @include responsive(mobile) {
         @include display(row);
@@ -11,21 +28,44 @@
         border: 1px solid lightgrey;
         width: 100%;
     }
+
+    @include responsive(desktop) {
+        justify-content: space-evenly;
+        @include widthAndHeight(100%,200px);
+    }
 }
 
 #menu {
     @include responsive(mobile) {
-        width: 40px;
-        height: 40px;
+        @include widthAndHeight(35px,35px);
         cursor: pointer; 
+    }
+
+    @include responsive(tablet) {
+        @include widthAndHeight(80px,60px);
+        cursor: pointer; 
+    }
+    @include responsive(desktop) {
+        @include widthAndHeight(60px,50px);
+        cursor: pointer; 
+        margin-left: 400px;
     }
 }
 
 #logo {
     @include responsive(mobile) {
-        width: 150px;
-        height: 100px;
+        @include widthAndHeight(150px,100px);
         margin-right: 170px;
+    }
+
+    @include responsive(tablet) {
+        @include widthAndHeight(350px,250px);
+        margin-right: 200px;
+    }
+
+    @include responsive(desktop) {
+        @include widthAndHeight(300px,170px);
+        margin-right: 50px;
     }
 }
 
@@ -34,33 +74,50 @@
         @include display(column);
         border: 1px solid lightgrey;
     }
+    @include responsive(desktop) {
+        @include display(row);
+        border: 1px solid lightgrey;
+    }
 }
 
 .nav-bar {
     li {
         @include responsive(mobile) {
             @include display(column);
-            justify-content: center;
-            list-style-type: none;
-            width: 100%;
-            height: 60px;
+            @include justifyAndTextStyle();
+            @include widthAndHeight(100%,60px);
+        }
+
+        @include responsive(tablet) {
+            @include display(column);
+            @include widthAndHeight(100%,100px);
+        }
+
+        @include responsive(desktop) {
+            @include display(column);
+            @include justifyAndTextStyle();
+            @include widthAndHeight(100%,100px);
         }
     }   
 }
-
 
 .nav-bar {
             li {
                 a {
                     @include responsive(mobile) {
-                        text-decoration: none;
-                        font-family: 'Itim', cursive;
-                        font-size: 23px;
-                        color: black; 
+                        @include textProperties(23px);
                         &:hover {
                             color: #80cbc4!important;
                             border-bottom: 3px solid  #80cbc4;
                         }
+                    } 
+
+                    @include responsive(tablet) {
+                        @include textProperties(35px);
+                    } 
+
+                    @include responsive(desktop) {
+                        @include textProperties(33px);
                     } 
                 }
             }   
