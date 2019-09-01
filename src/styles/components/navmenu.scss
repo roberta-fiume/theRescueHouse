@@ -24,26 +24,43 @@
  .icon-container {
     @include display(row);
     justify-content: space-around;
-    // border: 1px solid lightgrey;
     width: 100%;
     box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
     width: 100%;
+
+    @include responsive(desktop) {
+        box-shadow: none;
+        height: 125px;
+    }
 }
 
 #menu {
     @include widthAndHeight(35px,35px);
     cursor: pointer;
-    margin-right: 20px;    
+    margin-right: 20px;   
+    @include responsive(tablet) {
+        @include widthAndHeight(55px,45px);
+    }
+    
 }
 
 #logo {
     @include widthAndHeight(150px,100px);
     margin-right: 170px;
+
+    @include responsive(tablet) {
+        @include widthAndHeight(170px,120px);
+    }
 }
 
 .nav-bar {
     @include display(column);
     border: 1px solid lightgrey;
+
+    
+    @include responsive(desktop) {
+        @include display(row);
+    }
   
 }
 
@@ -52,6 +69,10 @@
         @include display(column);
         @include justifyAndTextStyle();
         @include widthAndHeight(100%,60px);
+
+        @include responsive(tablet) {
+            @include widthAndHeight(100%,90px);
+        }
     }   
 }
         
@@ -62,6 +83,10 @@
             &:hover {
                 color: #80cbc4!important;
                 border-bottom: 3px solid  #80cbc4;
+            }
+
+            @include responsive(tablet) {
+                @include textProperties(28px);
             }
         }
     }   

@@ -20,6 +20,14 @@
         @include responsive(mobile) {
             @include widthAndHeight(50px,40px);
         }
+
+        @include responsive(tablet) {
+            @include widthAndHeight(80px,70px);
+        }
+
+        @include responsive(desktop) {
+            @include widthAndHeight(120px,80px);
+        }
     }
 
 .carousel-control-next-icon {
@@ -40,8 +48,20 @@
 
     @include responsive(mobile) {
         &:after {
-            content: '>';
             font-size: 60px;
+        }
+    }
+
+    @include responsive(tablet) {
+        &:after {
+            font-size: 90px;
+        }
+    }
+
+    @include responsive(desktop) {
+        &:after {
+            content: '>';
+            font-size: 120px;
         }
     }
 }
@@ -68,6 +88,18 @@
             font-size: 60px;
         }
     }
+
+    @include responsive(tablet) {
+        &:after {
+            font-size: 90px;
+        }
+    }
+
+    @include responsive(desktop) {
+        &:after {
+            font-size: 120px;
+        }
+    }
 }
 
 #petBox {
@@ -77,6 +109,14 @@
     @include responsive(mobile) {
         @include widthAndHeight(425px,425px);
     }
+
+    @include responsive(tablet) {
+        @include widthAndHeight(625px,625px);
+    }
+
+    @include responsive(desktop) {
+        @include widthAndHeight(925px,925px);
+    }
 }
 
 #petName {
@@ -84,6 +124,14 @@
 
     @include responsive(mobile) {
         @include textProperties(25px);
+    }
+
+    @include responsive(tablet) {
+        @include textProperties(30px);
+    }
+
+    @include responsive(desktop) {
+        @include textProperties(35px);
     }
 }
 
@@ -94,6 +142,10 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
+
+    @include responsive(desktop) {
+        margin-top: 0;
+    }
 }
 
 #image {
@@ -101,6 +153,14 @@
 
     @include responsive(mobile) {
         @include widthAndHeight(300px,300px);
+    }
+
+    @include responsive(tablet) {
+        @include widthAndHeight(450px,450px);
+    }
+
+    @include responsive(desktop) {
+        @include widthAndHeight(750px,750px);
     }
 } 
 
