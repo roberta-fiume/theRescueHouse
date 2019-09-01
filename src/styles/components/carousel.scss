@@ -115,7 +115,7 @@
     }
 
     @include responsive(desktop) {
-        @include widthAndHeight(925px,925px);
+        @include widthAndHeight(725px,725px);
     }
 }
 
@@ -131,7 +131,8 @@
     }
 
     @include responsive(desktop) {
-        @include textProperties(35px);
+        margin: 10px;
+        @include textProperties(30px);
     }
 }
 
@@ -160,7 +161,7 @@
     }
 
     @include responsive(desktop) {
-        @include widthAndHeight(750px,750px);
+        @include widthAndHeight(650px,650px);
     }
 } 
 

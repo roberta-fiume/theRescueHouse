@@ -29,8 +29,9 @@
     width: 100%;
 
     @include responsive(desktop) {
+        justify-content: space-between;
         box-shadow: none;
-        height: 125px;
+        height: 85px;
     }
 }
 
@@ -41,6 +42,11 @@
     @include responsive(tablet) {
         @include widthAndHeight(55px,45px);
     }
+
+    @include responsive(desktop) {
+        @include widthAndHeight(40px,30px);
+         margin-right: 20px;
+    }
     
 }
 
@@ -50,6 +56,11 @@
 
     @include responsive(tablet) {
         @include widthAndHeight(170px,120px);
+    }
+
+    @include responsive(desktop) {
+        @include widthAndHeight(130px,80px);
+        margin-left: 10px;
     }
 }
 
@@ -73,6 +84,10 @@
         @include responsive(tablet) {
             @include widthAndHeight(100%,90px);
         }
+
+        @include responsive(desktop) {
+            @include widthAndHeight(100%,60px);
+        }
     }   
 }
         
@@ -87,6 +102,10 @@
 
             @include responsive(tablet) {
                 @include textProperties(28px);
+            }
+
+            @include responsive(desktop) {
+                @include textProperties(23px);
             }
         }
     }   
