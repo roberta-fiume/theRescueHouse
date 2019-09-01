@@ -1,14 +1,115 @@
+@mixin widthAndHeight($setWidth:200px, $setHeight:200px) {
+    width: $setWidth;
+    height: $setHeight;
+}
 
-// @mixin widthAndHeight($setWidth:200px, $setHeight:200px) {
-//     width: $setWidth;
-//     height: $setHeight;
-// }
+@mixin textProperties($setFontSize:23px) {
+    font-family: 'Itim', cursive;
+    font-size: $setFontSize;
+    color: black;
+}
 
-// @mixin textProperties($setFontSize:23px) {
-//     font-family: 'Itim', cursive;
-//     font-size: $setFontSize;
-//     color: black;
-// }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+        @include widthAndHeight(30px,20px);
+        outline: black;
+        // background-size: 100%, 100%;
+        // background-image: none;
+        
+        @include responsive(mobile) {
+            @include widthAndHeight(50px,40px);
+        }
+    }
+
+.carousel-control-next-icon {
+    margin-right: 10px;
+    &:after {
+        content: '>';
+        font-size: 55px;
+        color:  #80cbc4;
+    }
+
+    &:active:after {
+        background-color: rgba(225,255,255,0.9);
+    }
+
+    &:hover:after {
+        color: #4f9a94;
+    }
+
+    @include responsive(mobile) {
+        &:after {
+            content: '>';
+            font-size: 60px;
+        }
+    }
+}
+
+.carousel-control-prev-icon {
+    margin-left: 10px;
+    &:after {
+        content: '<';
+        font-size: 55px;
+        color:  #80cbc4;  
+    }
+
+    &:active:after {
+        background-color: rgba(225,255,255,0.9);
+    }
+
+    &:hover:after {
+        color: #4f9a94
+    }
+
+    @include responsive(mobile) {
+        &:after {
+            content: '<';
+            font-size: 60px;
+        }
+    }
+}
+
+#petBox {
+    @include widthAndHeight(300px,300px);
+    padding: 5px;
+
+    @include responsive(mobile) {
+        @include widthAndHeight(425px,425px);
+    }
+}
+
+#petName {
+    @include textProperties(20px);
+
+    @include responsive(mobile) {
+        @include textProperties(25px);
+    }
+}
+
+#carousel {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#image {
+    @include widthAndHeight(200px,200px);
+
+    @include responsive(mobile) {
+        @include widthAndHeight(300px,300px);
+    }
+} 
+
+
+
+
+
+
+    
 
 // #petBox {
 //     @include responsive(mobile) {

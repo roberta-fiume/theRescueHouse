@@ -22,47 +22,50 @@
 }
 
  .icon-container {
-        @include display(row);
-        justify-content: space-around;
-        border: 1px solid lightgrey;
-        width: 100%;
-    }
+    @include display(row);
+    justify-content: space-around;
+    // border: 1px solid lightgrey;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    width: 100%;
+}
 
-    #menu {
-        @include widthAndHeight(35px,35px);
-        cursor: pointer; 
-        
-    }
+#menu {
+    @include widthAndHeight(35px,35px);
+    cursor: pointer;
+    margin-right: 20px;    
+}
 
-    #logo {
-        @include widthAndHeight(150px,100px);
-        margin-right: 170px;
-    }
+#logo {
+    @include widthAndHeight(150px,100px);
+    margin-right: 170px;
+}
 
-    .nav-bar {
+.nav-bar {
+    @include display(column);
+    border: 1px solid lightgrey;
+  
+}
+
+.nav-bar {
+    li {
         @include display(column);
-        border: 1px solid lightgrey;
-    }
-
-    .nav-bar {
-            li {
-                @include display(column);
-                @include justifyAndTextStyle();
-                @include widthAndHeight(100%,60px);
-            }   
-        }
+        @include justifyAndTextStyle();
+        @include widthAndHeight(100%,60px);
+    }   
+}
         
-        .nav-bar {
-                    li {
-                        a {
-                            @include textProperties(23px);
-                            &:hover {
-                                color: #80cbc4!important;
-                                border-bottom: 3px solid  #80cbc4;
-                            }
-                        }
-                    }   
-                }   
+.nav-bar {
+    li {
+        a {
+            @include textProperties(23px);
+            &:hover {
+                color: #80cbc4!important;
+                border-bottom: 3px solid  #80cbc4;
+            }
+        }
+    }   
+}   
         
         
     
