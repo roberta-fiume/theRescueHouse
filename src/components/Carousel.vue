@@ -64,14 +64,6 @@ export default {
 @import "../styles/global.scss";
 @import "../styles/components/carousel.scss";
 
-    // @media only screen and (min-width: 768px) {
-
-    // }
-
-    // @media only screen and (min-width: 1024px) {
-
-    // }
-
 
 </style>
 

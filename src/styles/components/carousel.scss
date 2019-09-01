@@ -9,6 +9,18 @@
         height: 50px;
         cursor: pointer
     }
+
+    @include responsive(tablet) {
+        width: 80px;
+        height: 80px;
+        cursor: pointer
+    }
+
+    @include responsive(desktop) {
+        width: 120px;
+        height: 120px; 
+        cursor: pointer
+    }
 }
 
 #image {
@@ -16,15 +28,22 @@
         width: 300px;
         height: 300px;
     }
-}  
+    @include responsive(tablet) {
+        width: 400px;
+        height: 400px;
+    }
 
+    @include responsive(desktop) {
+        width: 500px;
+        height: 500px;
+    }
+}  
 
 #carousel {
     @include responsive(mobile) {
+        margin-top: 50px;
         display: flex;
         align-items: center;
-        width: 450px;
-        height: 310px;
         flex-direction: row;
         justify-content: space-around;
     }
