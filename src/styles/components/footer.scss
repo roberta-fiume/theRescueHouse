@@ -1,0 +1,85 @@
+@mixin display($direction:row) {
+    display: flex;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin widthAndHeight($setWidth:40px, $setHeight:60px) {
+    width: $setWidth;
+    height: $setHeight
+}
+
+@mixin textProperties($setFontSize:23px) {
+    text-decoration: none;
+    font-family: 'Itim', cursive;
+    font-size: $setFontSize;
+    color: black;
+}
+
+@mixin justifyAndTextStyle() {
+    justify-content: center;
+    list-style-type: none;
+}
+
+.links {
+    margin-top: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    @include widthAndHeight(100%, 250px);
+    @include display(column);
+
+    @include responsive(desktop) {
+        justify-content: space-between;
+        @include display(row);
+    }
+}
+
+.link-box {
+    @include display(column);
+    @include textProperties(19px);
+    margin-top: 20px;
+    list-style-type: none;
+    li {
+        @include widthAndHeight(100%,40px);
+        a {
+            text-decoration: none;
+        }
+    }
+
+    @include responsive(desktop) {
+        @include display(row);
+    }
+}
+
+.social-icon {
+    @include widthAndHeight(40px,40px);
+}
+
+#primary-box {
+    li {
+        @include responsive(desktop) {
+            margin-left: 20px;
+        }
+    }
+}
+
+#secundary-link-box {
+    display: flex;
+    flex-direction: column-reverse;
+    a {
+        text-decoration: none;
+        @include responsive(desktop) {
+            margin-right: 20px;
+        }
+    }
+    @include responsive(desktop) {
+        @include display(row);
+    }
+}
+
+.social-container {
+    a {
+    margin-right: 10px;
+    }  
+}
+
+
