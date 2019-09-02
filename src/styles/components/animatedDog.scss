@@ -1,0 +1,52 @@
+#container {
+    margin-top: 50px;
+    margin-left: 200px;
+    text-align: left;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 3px solid #73AD21;
+
+    img {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+}
+
+.dog-head {
+    z-index: 2;
+}
+
+.dog-body {
+    z-index: 1;
+    margin-top: 100px;
+    margin-left: 40px;
+    // background-repeat: no-repeat;
+}
+
+.dog-tail {
+    z-index: 3;
+}
+
+// div.dog-body {
+//     z-index: 1;
+//     height: 300px;
+//     margin-top: -175px;
+//     margin-left: 40px;
+//     background-repeat: no-repeat;
+// }
+
+.animate-head {
+    animation: head-move 1s ease-in-out infinite;
+}
+
+.animate-tail {
+    animation: head-move 0.1s ease-in-out infinite;
+}
+
+@keyframes head-move {
+    50% { 
+        transform: rotate(-10deg); 
+    }
+}

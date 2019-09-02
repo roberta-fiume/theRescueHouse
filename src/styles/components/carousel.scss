@@ -120,10 +120,9 @@
 
 #petName {
     @include textProperties(20px);
-    // align-self: flex-start;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // display: flex;
     position: absolute;
     top: 40px;
     color: #ca2c92 !important;
@@ -134,7 +133,6 @@
 
     @include responsive(tablet) {
         @include textProperties(30px);
-        
         top: 80px;
     }
 
@@ -175,71 +173,4 @@
     @include responsive(desktop) {
         @include widthAndHeight(650px,650px);
     }
-} 
-
-
-
-
-
-
-    
-
-// #petBox {
-//     @include responsive(mobile) {
-//         @include widthAndHeight(400px,400px);
-//         border: 1px solid lightgrey;
-//         padding: 10px;
-//     } 
-//     // hacer tablet y desktop
-// }
-
-// #petName {
-//     @include responsive(mobile) {
-//         @include textProperties(23px)
-//     }
-
-//      // hacer tablet y desktop
-// }
-
-// #carousel {
-//     @include responsive(mobile) {
-//         margin-top: 50px;
-//         display: flex;
-//         align-items: center;
-//         flex-direction: row;
-//         justify-content: space-around;
-//     }
-// }
-
-// .arrows {
-//     @include responsive(mobile) {
-//         @include widthAndHeight(50px,50px);
-//         cursor: pointer
-//     }
-
-//     @include responsive(tablet) {
-//         @include widthAndHeight(100px,100px);
-//         cursor: pointer
-//     }
-
-//     @include responsive(desktop) {
-//         @include widthAndHeight(130px,130px);
-//         cursor: pointer
-//     }
-// }
-
-// #image {
-//     @include responsive(mobile) {
-//         @include widthAndHeight(300px,300px);
-//     }
-//     @include responsive(tablet) {
-//         @include widthAndHeight(550px,550px);
-//     }
-
-//     @include responsive(desktop) {
-//         @include widthAndHeight(700px,700px);
-//     }
-// }  
-
-
-
+}

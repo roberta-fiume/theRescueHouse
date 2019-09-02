@@ -3,7 +3,7 @@
     <NavMenu />
     <Carousel />
     <PromoBoxes />
-    <SaveLives />
+    <AnimatedDog />
     <Footer />
   </div>
 </template>
@@ -12,7 +12,7 @@
 import NavMenu  from './components/NavMenu.vue'
 import Carousel from './components/Carousel.vue'
 import PromoBoxes from './components/PromoBoxes.vue'
-import SaveLives from './components/SaveLives.vue'
+import AnimatedDog from './components/AnimatedDog.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -21,7 +21,7 @@ export default {
     NavMenu ,
     Carousel,
     PromoBoxes,
-    SaveLives,
+    AnimatedDog,
     Footer
   }
 }

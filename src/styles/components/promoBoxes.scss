@@ -92,7 +92,7 @@
     }
 }
 
-img {
+.promoBoxImage {
     @include widthAndHeight(200px,200px); 
     @include responsive(mobile) {
         @include widthAndHeight(250px,250px);
