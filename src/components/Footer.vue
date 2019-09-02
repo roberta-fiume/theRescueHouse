@@ -6,7 +6,7 @@
             <li><a href="#">Terms</a></li>
         </div>
         <div class="link-box" id="secundary-link-box" >
-            <a href="#">Copyright</a>
+            <a href="#">Copyright 2019</a>
             <div class="social-container">
                 <a href="#"><img :src="images.fb" class="social-icon"/></a>
                 <a href="#"><img :src="images.twitter" class="social-icon"/></a>
