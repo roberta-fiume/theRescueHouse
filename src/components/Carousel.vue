@@ -1,13 +1,15 @@
 <template>
   <div id="carousel">
-    <!-- <img :src="arrows.arrowLeft" class="arrows" @click="gotToPreviousSlide"/> -->
-  <div class="carousel-control-prev-icon" @click="gotToPreviousSlide"></div>
-    <div id="petBox">
-        <h3 id="petName">Meet {{petName}}</h3>
-         <img :src="this.singleSlide" width="500px" height="500px" id="image"/>
-    </div>
-    <!-- <img :src="arrows.arrowRight" class="arrows" @click="goToNextSlide"/> -->
-    <div class="carousel-control-next-icon" @click="goToNextSlide"></div>
+        <!-- <img :src="arrows.arrowLeft" class="arrows" @click="gotToPreviousSlide"/> -->
+    <div class="carousel-control-prev-icon" @click="gotToPreviousSlide"></div>
+        <div class="wrapper">
+            <div id="petBox">
+                <h3 id="petName">Meet {{petName}}</h3>
+                <img :src="this.singleSlide" width="500px" height="500px" id="image"/>
+            </div>
+        </div>
+        <!-- <img :src="arrows.arrowRight" class="arrows" @click="goToNextSlide"/> -->
+        <div class="carousel-control-next-icon" @click="goToNextSlide"></div>
   </div>
 </template>
 

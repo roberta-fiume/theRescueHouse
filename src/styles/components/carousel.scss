@@ -105,6 +105,10 @@
 #petBox {
     @include widthAndHeight(300px,300px);
     padding: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  
 
     @include responsive(mobile) {
         @include widthAndHeight(425px,425px);
@@ -121,6 +125,16 @@
 
 #petName {
     @include textProperties(20px);
+    // align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     @include responsive(mobile) {
         @include textProperties(25px);
@@ -134,6 +148,10 @@
         margin: 10px;
         @include textProperties(30px);
     }
+}
+
+.wrapper {
+    position: relative;
 }
 
 #carousel {

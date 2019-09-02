@@ -19,7 +19,25 @@
 .text {
     @include textProperties(19px);
     margin-bottom: 25px;
-          
+
+    @include responsive(mobile) {
+        @include textProperties(21px);
+        margin-bottom: 45px;
+    }
+         
+}
+
+#boxes-container {
+       display: flex ;
+       width: 100%;
+    
+    @include responsive(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+ 
 }
 
 .box {
@@ -35,10 +53,41 @@
     }
 
     @include responsive(tablet) {
-        @include widthAndHeight(625px,625px);
+        flex: 1;
+        @include widthAndHeight(50%,625px);
     }
 
     @include responsive(desktop) {
         @include widthAndHeight(725px,725px);
     }
+}
+
+#box1 {
+    @include responsive(tablet) {
+        flex: 2;
+        @include widthAndHeight(50%,625px);
+    }
+}
+
+#box2 {
+    @include responsive(tablet) {
+        flex: 2;
+        @include widthAndHeight(50%,625px);
+    }
+}
+
+#box3 {
+    @include responsive(tablet) {
+       
+        flex: 0 auto;
+        @include widthAndHeight(50%,625px);
+    }
+}
+
+img {
+    @include widthAndHeight(200px,200px); 
+    @include responsive(mobile) {
+        @include widthAndHeight(250px,250px);
+    }
+ 
 }
