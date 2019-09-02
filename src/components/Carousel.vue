@@ -21,14 +21,10 @@ export default {
     data() {
         return {
             images: [
-                {name: require('@/assets/img/bea.jpg'),
-                 petName:"Bea"},
-                {name: require('@/assets/img/ben.jpg'),
-                 petName:"Ben"},
-                {name: require('@/assets/img/jasmine.jpg'),
-                 petName:"Jasmine"},
-                {name: require('@/assets/img/oliver.jpg'),
-                 petName:"Oliver"},
+                {name: require('@/assets/img/bea.jpg'), petName:"Bea"},
+                {name: require('@/assets/img/ben.jpg'), petName:"Ben"},
+                {name: require('@/assets/img/jasmine.jpg'), petName:"Jasmine"},
+                {name: require('@/assets/img/oliver.jpg'), petName:"Oliver"},
             ],
             
             arrows: {
@@ -51,19 +47,23 @@ export default {
 
     methods: {
         goToNextSlide() {
-            this.currentImage++;
-            let singleImage = this.images[this.currentImage].name;
-            this.singleSlide = singleImage;
-            this.goToNextPetName();
-          
+            if(this.currentImage < this.images.length) {
+                if (this.currentImage < this.images.length - 1) {
+                    this.currentImage++;
+                }
+                let singleImage = this.images[this.currentImage].name;
+                this.singleSlide = singleImage;
+                this.goToNextPetName();
+            }
             return this.singleSlide
         },
         gotToPreviousSlide() {
-            this.currentImage--;
-            let singleImage = this.images[this.currentImage].name;
-            this.singleSlide = singleImage;
-            console.log("THIS IS THE slide", petName);
-            this.goToPreviousPetName();
+            if(this.currentImage > 0) {
+                this.currentImage--;
+                let singleImage = this.images[this.currentImage].name;
+                this.singleSlide = singleImage;
+                this.goToPreviousPetName();
+            }
             return this.singleSlide
         },
 
