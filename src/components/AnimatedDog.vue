@@ -1,9 +1,12 @@
 <template>
- <div id=container>
-    <img v-bind:class="{ 'animate-head': isDogHeadClicked }" class="dog-head" :src="images.dogHead" @click="animateHead"/>
-    <img class="dog-body" :src="images.dogBody"/>
-    <img v-bind:class="{ 'animate-tail': isDogTailClicked }" class="dog-tail" :src="images.dogTail" @click="animateTail"/>
-  </div>
+    <div class="dog-container">
+        <p class="dog-title">To play with me, please click on my head or my tail, woof-woof!!</p>
+        <div class="animated-dog">
+            <img v-bind:class="{ 'animate-head': isDogHeadClicked }" class="dog-head" :src="images.dogHead" @click="animateHead"/>
+            <img class="dog-body" :src="images.dogBody"/>
+            <img v-bind:class="{ 'animate-tail': isDogTailClicked }" class="dog-tail" :src="images.dogTail" @click="animateTail"/>
+        </div>
+    </div>
 </template>
 
 <script>
