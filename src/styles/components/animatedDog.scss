@@ -9,14 +9,20 @@
     height: 550px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
     margin: 20px 0 20px;
+    padding-top: 10px;
 }
 .dog-title {
-    margin-top: 10px;
-    @include textProperties(25px);
+    margin-top: 20px;
+    overflow-wrap: break-word;
+    @include textProperties(19px);
+
+    @include responsive(mobile) {
+        @include textProperties(21px);
+    }
 }
 
 .animated-dog {
-    margin-top: 70px;
+    margin-right: 30px;
     text-align: left;
     position: relative;
     display: inline-block;
@@ -26,6 +32,10 @@
         position: absolute;
         top: 25px;
         left: 25px;
+    }
+
+    @include responsive(desktop) {
+        margin-top: 70px;
     }
 }
 
