@@ -1,0 +1,44 @@
+@mixin display($direction:column) {
+    display: flex;
+    align-items: center;
+    flex-direction: $direction;
+    justify-content: center;
+}
+
+@mixin widthAndHeight($setWidth:200px, $setHeight:200px) {
+    width: $setWidth;
+    height: $setHeight
+}
+
+@mixin textProperties($setFontSize:23px) {
+    font-family: 'Itim', cursive;
+    font-size: $setFontSize;
+    color: black;
+}
+
+.text {
+    @include textProperties(19px);
+    margin-bottom: 25px;
+          
+}
+
+.box {
+    @include widthAndHeight(100%,300px);
+   
+    @include display(column);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    padding: 5px;
+
+    @include responsive(mobile) {
+        @include widthAndHeight(100%,425px);
+    }
+
+    @include responsive(tablet) {
+        @include widthAndHeight(625px,625px);
+    }
+
+    @include responsive(desktop) {
+        @include widthAndHeight(725px,725px);
+    }
+}
