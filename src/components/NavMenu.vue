@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
     <div class="icon-container">
         <img :src="images.logo" id="logo"/>
         <img :src="images.menu" id="menu" @click="toggleMenu"/>
